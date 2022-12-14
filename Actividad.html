@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <title>Angular|Calcular sueldos</title>
+</head>
+<body>
+    <div ng-app="myApp" ng-controller="formCtrl">
+        <form>
+            <p>Nombre: </p> <br>
+            <input type="text" ng-model="firstName"> <br>
+            <p>Apellido:</p> <br>
+            <input  type="text" ng-model="lastName" > <br>
+            <p>Codigo: </p> <br>
+            <input  type="number" ng-model="unicoCodigo" > <br>
+            <p>Horas trabajadas: </p> <br>
+            <input  type="number" ng-model="horasTrabajo" > <br>
+            <p>Tarifa por hora: </p> <br>
+            <input  type="number" ng-model="tarifaHora" > <br>
+            <br><br>
+        </form>
+
+        <div>
+            <p>Nombre: {{firstName}}</p>
+            <p>Apellido: {{lastName}}</p>
+            <p>Codigo: n° {{unicoCodigo}}</p>
+            <p>Basico: S/ {{calcularBasico()}}</p>
+            <p>Descuento: S/ {{calcularDescuento()}} </p>
+            <p>Salario neto: S/ {{salarioNeto()}} </p>
+        </div>
+    </div>
+
+    <script src="Ejercicio.js"></script>
+</body>
+</html>
